@@ -29,16 +29,16 @@ public static class Extention {
         return component;
     }
 
-    // Extension method to set the layer of a GameObject
-    public static GameObject SetLayer(this GameObject obj, int layer) {
-        obj.layer = layer;
-        return obj;
-    }
+   // Extension method to set the layer of a GameObject
+   public static GameObject SetLayer(this GameObject obj, string layerName) {
+       obj.layer = LayerMask.NameToLayer(layerName);
+       return obj;
+   }
 
-    // Extension method to check if a GameObject's layer matches a specified layer name
-    public static bool HasLayer(this GameObject obj, string layerName) {
-        return obj.layer == LayerMask.NameToLayer(layerName);
-    }
+   // Extension method to check if a GameObject's layer matches a specified layer name
+   public static bool HasLayer(this GameObject obj, string layerName) {
+       return obj.layer == LayerMask.NameToLayer(layerName);
+   }
 
     // Extension method to reset the transform of a GameObject
     public static Transform ResetTransform(this Transform transfrom) {
