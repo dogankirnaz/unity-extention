@@ -35,6 +35,11 @@ public static class Extention {
         return obj;
     }
 
+    // Extension method to check if a GameObject's layer matches a specified layer name
+    public static bool HasLayer(this GameObject obj, string layerName) {
+        return obj.layer == LayerMask.NameToLayer(layerName);
+    }
+
     // Extension method to reset the transform of a GameObject
     public static Transform ResetTransform(this Transform transfrom) {
         transfrom.position = Vector3.zero;
