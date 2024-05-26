@@ -29,20 +29,20 @@ Rigidbody rb = objWithComponent.RequireComponent<Rigidbody>();
 ```
 
 ```
-// SetLayer
+// ToggleGameObject
 GameObject objToToggle = ...; // Get reference to GameObject
 objToToggle.ToggleGameObject();
 ```
 
 ```
-// ToggleGameObject
+// SetLayer
 GameObject objToSetLayer = ...; // Get reference to GameObject
 string layerName = ...;  // Layer name to add GameObject
 objToSetLayer.SetLayer(layerName);
 ```
 
 ```
-// ToggleGameObject
+// HasLayer
 GameObject objToCheckLayer = ...; // Get reference to GameObject
 string layerName = ...;  // Layer name to add GameObject
 objToCheckLayer.HasLayer(layerName);
