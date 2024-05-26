@@ -29,9 +29,23 @@ Rigidbody rb = objWithComponent.RequireComponent<Rigidbody>();
 ```
 
 ```
-// ResetTransform
-Transform transformToReset = ...; // Get reference to Transform
-transformToReset.ResetTransform();
+// SetLayer
+GameObject objToToggle = ...; // Get reference to GameObject
+objToToggle.ToggleGameObject();
+```
+
+```
+// ToggleGameObject
+GameObject objToSetLayer = ...; // Get reference to GameObject
+string layerName = ...;  // Layer name to add GameObject
+objToSetLayer.SetLayer(layerName);
+```
+
+```
+// ToggleGameObject
+GameObject objToCheckLayer = ...; // Get reference to GameObject
+string layerName = ...;  // Layer name to add GameObject
+objToCheckLayer.HasLayer(layerName);
 ```
 
 ```
